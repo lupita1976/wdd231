@@ -1,3 +1,15 @@
+/* =========================================================
+   WDD 231 - small.css (mobile-first base styles, 320px+)
+   Tokens:
+   - Ink:      #1F2A24
+   - Stone:    #F2F0EC
+   - Card:     #FFFFFF
+   - Sandstone (acento): #C97B3D
+   - Ireland green (acento secundario): #2F7A4D
+   - Serif (encabezados): "Source Serif 4"
+   - Sans (cuerpo / nav): system-ui
+   ========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +38,7 @@ a {
   color: #C97B3D;
 }
 
+/* ---------------- Header ---------------- */
 header {
   display: flex;
   align-items: center;
@@ -47,6 +60,7 @@ header {
   font-size: 1.05rem;
 }
 
+/* Hamburger button */
 #hamburger {
   background: none;
   border: none;
@@ -78,6 +92,7 @@ header {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Nav closed by default on small screens */
 nav {
   display: none;
   width: 100%;
@@ -116,6 +131,7 @@ nav ul li a.current {
   font-weight: 600;
 }
 
+/* ---------------- Main ---------------- */
 main {
   max-width: 1100px;
   margin: 0 auto;
@@ -155,6 +171,7 @@ main > h1 {
   margin: 1.1rem auto;
 }
 
+/* Course filter buttons */
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -212,6 +229,13 @@ main > h1 {
   font-weight: 600;
 }
 
+.course-card .course-tech {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #2F7A4D;
+  margin: 0.2rem 0;
+}
+
 .course-card .course-credits {
   font-size: 0.8rem;
   color: #55605a;
@@ -223,6 +247,7 @@ main > h1 {
   text-align: center;
 }
 
+/* ---------------- Footer ---------------- */
 footer {
   background-color: #1F2A24;
   color: #F2F0EC;
