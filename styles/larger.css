@@ -1,0 +1,118 @@
+@media (min-width: 700px) {
+
+  header {
+    flex-wrap: nowrap;
+    padding: 0.9rem 1.75rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    width: auto;
+    order: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+    margin-top: 0;
+    border-top: none;
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    border-bottom: none;
+    border-bottom: 3px solid transparent;
+    padding: 0.5rem 0.9rem;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus-visible {
+    background-color: transparent;
+    border-bottom-color: #C97B3D;
+  }
+
+  nav ul li a.current {
+    border-bottom-color: #C97B3D;
+  }
+
+  main {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  main > h1 {
+    font-size: 2.1rem;
+    text-align: left;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "heading heading"
+      "about   photo"
+      "courses courses";
+    gap: 1.5rem;
+  }
+
+  main > h1 {
+    grid-area: heading;
+  }
+
+  .about {
+    grid-area: about;
+    margin-bottom: 0;
+  }
+
+  .photo {
+    grid-area: photo;
+    margin-bottom: 0;
+  }
+
+  .courses {
+    grid-area: courses;
+    margin-bottom: 0;
+  }
+
+  .about p {
+    padding: 1.5rem;
+  }
+
+  .filter-buttons {
+    padding: 1.25rem 1.5rem 0;
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+  }
+
+  .course-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.25rem 1.5rem;
+  }
+
+  #credit-total {
+    padding: 0 1.5rem 1.5rem;
+    text-align: right;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1.25rem 1.75rem;
+  }
+
+  .social-links {
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  footer p + p {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  color: #1F2A24;
+  background-color: #F2F0EC;
+  line-height: 1.55;
+}
+
+h1, h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #C97B3D;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #1F2A24;
+  color: #F2F0EC;
+  padding: 0.75rem 1rem;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+#hamburger {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#hamburger .bar {
+  width: 26px;
+  height: 3px;
+  background-color: #F2F0EC;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#hamburger[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#hamburger[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+#hamburger[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+nav {
+  display: none;
+  width: 100%;
+  order: 3;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+  border-top: 1px solid #2F7A4D;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.85rem 0.5rem;
+  color: #F2F0EC;
+  text-decoration: none;
+  border-bottom: 1px solid #33443a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+  background-color: #33443a;
+  color: #C97B3D;
+}
+
+nav ul li a.current {
+  color: #C97B3D;
+  font-weight: 600;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2.5rem;
+}
+
+main > h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dcd8cf;
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.card > h2 {
+  background-color: #1F2A24;
+  color: #F2F0EC;
+  font-size: 1rem;
+  padding: 0.75rem 1.1rem;
+}
+
+.about p {
+  padding: 1.1rem;
+}
+
+.photo {
+  text-align: center;
+}
+
+.photo img {
+  margin: 1.1rem auto;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem 0;
+}
+
+.filter-btn {
+  flex: 1 1 auto;
+  min-width: 90px;
+  background-color: #F2F0EC;
+  border: 1px solid #C97B3D;
+  color: #1F2A24;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  background-color: #C97B3D;
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background-color: #1F2A24;
+  border-color: #1F2A24;
+  color: #F2F0EC;
+}
+
+.course-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem;
+}
+
+.course-card {
+  background-color: #F2F0EC;
+  border: 1px solid #dcd8cf;
+  border-left: 6px solid #C97B3D;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.course-card.completed {
+  border-left-color: #2F7A4D;
+  background-color: #eaf3ec;
+}
+
+.course-card .course-title {
+  font-weight: 600;
+}
+
+.course-card .course-credits {
+  font-size: 0.8rem;
+  color: #55605a;
+}
+
+#credit-total {
+  padding: 0 1.1rem 1.1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #1F2A24;
+  color: #F2F0EC;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.social-links a {
+  color: #F2F0EC;
+  display: block;
+}
+
+.social-links img {
+  filter: invert(1);
+}
+
+.social-links a:hover img,
+.social-links a:focus-visible img {
+  filter: invert(60%) sepia(45%) saturate(600%) hue-rotate(-10deg);
+}
+
+footer p + p {
+  margin-top: 0.35rem;
+  color: #a9c9b6;
+}
