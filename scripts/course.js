@@ -31,7 +31,7 @@ function renderCourses(filter) {
   });
 
   const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
-  creditTotal.textContent = `The total number of credits for the courses shown above is ${totalCredits}.`;
+  creditTotal.textContent = `The total number of credits for the courses are ${totalCredits}.`;
 }
 
 filterButtons.forEach((button) => {
