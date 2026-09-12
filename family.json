@@ -1,0 +1,18 @@
+{
+  "family_name": "Fernandez",
+  "number_of_people": 2,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Alain Aguilar",
+      "gender": "Male",
+      "birthdate": "1981-12-12"
+    },
+    {
+      "name": "Guadalupe Fernandez",
+      "gender": "Female",
+      "birthdate": "1976-02-13"
+    }
+       
+  ]
+}
