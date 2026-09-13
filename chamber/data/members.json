@@ -1,0 +1,88 @@
+{
+  "members": [
+    {
+      "companyName": "TechSolutions Inc.",
+      "address": "123 Innovation Drive, San Francisco, CA 94105",
+      "phoneNumber": "(415) 555-0123",
+      "websiteURL": "https://www.techsolutions.com",
+      "imageFile": "techsolutions.jpg",
+      "membershipLevel": 3,
+      "industry": "Technology",
+      "contactPerson": "Sarah Johnson",
+      "yearEstablished": 2015,
+      "description": "Leading provider of cloud-based software solutions"
+    },
+    {
+      "companyName": "Green Valley Landscaping",
+      "address": "456 Garden Street, Portland, OR 97201",
+      "phoneNumber": "(503) 555-0456",
+      "websiteURL": "https://www.greenvalleylandscaping.com",
+      "imageFile": "greenvalley.jpg",
+      "membershipLevel": 2,
+      "industry": "Landscaping & Outdoor Services",
+      "contactPerson": "Michael Chen",
+      "yearEstablished": 2010,
+      "description": "Professional landscaping and garden design services"
+    },
+    {
+      "companyName": "Downtown Coffee Roasters",
+      "address": "789 Main Street, Seattle, WA 98101",
+      "phoneNumber": "(206) 555-0789",
+      "websiteURL": "https://www.downtowncoffee.com",
+      "imageFile": "downtowncoffee.jpg",
+      "membershipLevel": 1,
+      "industry": "Food & Beverage",
+      "contactPerson": "Emma Rodriguez",
+      "yearEstablished": 2018,
+      "description": "Artisan coffee roastery and café"
+    },
+    {
+      "companyName": "Premier Real Estate Group",
+      "address": "321 Oak Avenue, Austin, TX 78701",
+      "phoneNumber": "(512) 555-0321",
+      "websiteURL": "https://www.premierrealestate.com",
+      "imageFile": "premierrealestate.jpg",
+      "membershipLevel": 3,
+      "industry": "Real Estate",
+      "contactPerson": "David Martinez",
+      "yearEstablished": 2005,
+      "description": "Full-service residential and commercial real estate"
+    },
+    {
+      "companyName": "HealthFirst Medical Clinic",
+      "address": "654 Wellness Boulevard, Denver, CO 80202",
+      "phoneNumber": "(303) 555-0654",
+      "websiteURL": "https://www.healthfirstclinic.com",
+      "imageFile": "healthfirst.jpg",
+      "membershipLevel": 2,
+      "industry": "Healthcare",
+      "contactPerson": "Dr. Lisa Thompson",
+      "yearEstablished": 2012,
+      "description": "Comprehensive primary care and preventive medicine"
+    },
+    {
+      "companyName": "Creative Design Studio",
+      "address": "987 Arts District, Los Angeles, CA 90013",
+      "phoneNumber": "(213) 555-0987",
+      "websiteURL": "https://www.creativedesignstudio.com",
+      "imageFile": "creativedesign.jpg",
+      "membershipLevel": 1,
+      "industry": "Marketing & Design",
+      "contactPerson": "Alex Kim",
+      "yearEstablished": 2019,
+      "description": "Branding, web design, and digital marketing agency"
+    },
+    {
+      "companyName": "AutoCare Plus",
+      "address": "147 Motor Way, Phoenix, AZ 85001",
+      "phoneNumber": "(602) 555-0147",
+      "websiteURL": "https://www.autocareplus.com",
+      "imageFile": "autocareplus.jpg",
+      "membershipLevel": 2,
+      "industry": "Automotive Services",
+      "contactPerson": "Robert Williams",
+      "yearEstablished": 2008,
+      "description": "Complete automotive repair and maintenance services"
+    }
+  ]
+}

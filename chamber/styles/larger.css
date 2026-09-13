@@ -1,0 +1,76 @@
+@media (min-width: 700px) {
+
+  header {
+    flex-wrap: nowrap;
+    padding: 1rem 1.75rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    width: auto;
+    order: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+    margin-top: 0;
+    border-top: none;
+    gap: 0.25rem;
+  }
+
+  nav ul li a {
+    border-bottom: 3px solid transparent;
+    padding: 0.5rem 0.9rem;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus-visible {
+    background-color: transparent;
+    border-bottom-color: #C97B3D;
+  }
+
+  nav ul li a.current {
+    border-bottom-color: #C97B3D;
+  }
+
+  main {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  main > h1 {
+    font-size: 2rem;
+  }
+
+  .controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #directory.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  #directory.grid-view .member-card img {
+    height: 180px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1.25rem 1.75rem;
+  }
+
+  .footer-dev {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    text-align: right;
+  }
+}
