@@ -53,7 +53,6 @@
     min-height: 80px;
 }
 
-
 .membership-fieldset {
     border: 1px solid #dcd8cf;
     border-radius: 4px;
@@ -91,7 +90,6 @@
     height: 18px;
 }
 
-
 .form-section input[type="submit"] {
     background-color: #C97B3D;
     color: #ffffff;
@@ -112,7 +110,6 @@
 .form-section input[type="submit"]:active {
     transform: scale(0.98);
 }
-
 
 .cards-section h2 {
     font-family: "Source Serif 4", Georgia, serif;
@@ -141,9 +138,7 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.member-card .card-body {
-    padding: 1.25rem 1rem;
-}
+/* CORREGIDO: Se eliminó .member-card .card-body de aquí porque ya existe en small.css */
 
 .member-card .price {
     font-size: 1.1rem;
@@ -169,12 +164,11 @@
     background-color: #C97B3D;
 }
 
-
 .fade-in-card {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.6s ease forwards;
-    animation-delay: var(--delay, 0s);
+    /* Ya no necesita var(--delay) porque usamos las clases .delay-1, etc. */
 }
 
 @keyframes fadeInUp {
@@ -184,6 +178,11 @@
     }
 }
 
+/* Clases para reemplazar los estilos en línea */
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.6s; }
 
 .modal-overlay {
     display: none;
@@ -267,7 +266,6 @@
     color: #C97B3D;
 }
 
-
 .thankyou-section {
     max-width: 600px;
     margin: 0 auto;
@@ -334,7 +332,6 @@
     background-color: #a8622e;
 }
 
-
 @media (min-width: 700px) {
     .join-layout {
         flex-direction: row;
@@ -357,8 +354,3 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-
-.delay-1 { animation-delay: 0s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.4s; }
-.delay-4 { animation-delay: 0.6s; }

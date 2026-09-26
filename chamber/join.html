@@ -4,25 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Directory – Querétaro Chamber of Commerce</title>
-    <meta name="description" content="Directory of the companys in the Querétaro Chamber of Commerce." />
+    <title>Join – Querétaro Chamber of Commerce</title>
+    <meta name="description" content="Join the Querétaro Chamber of Commerce." />
     <meta name="author" content="Guadalupe Fernández León" />
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
-  <!-- Facebook / Open Graph -->
-  =<meta property="og:title" content="Directory – Querétaro Chamber of Commerce" />
-  <meta property="og:description" content="Directory of the companys in the Querétaro Chamber of Commerce" />
-  <meta property"og:image" content="https://lupita1976.github.io/wdd231/chamber/images/chamber-share.jpg" />
-  <meta property="og:url" content="https://lupita1976.github.io/wdd231/chamber/directory.html" />
-  <meta property="og:type" content="website" />
+    <!-- Facebook / Open Graph (CORREGIDO: Se eliminó el = sobrante y se agregó el = faltante) -->
+    <meta property="og:title" content="Join – Querétaro Chamber of Commerce" />
+    <meta property="og:description" content="Join the Querétaro Chamber of Commerce." />
+    <meta property="og:image" content="https://lupita1976.github.io/wdd231/chamber/images/chamber-share.jpg" />
+    <meta property="og:url" content="https://lupita1976.github.io/wdd231/chamber/join.html" />
+    <meta property="og:type" content="website" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -130,12 +128,13 @@
                 </form>
             </section>
 
-                <aside class="cards-section">
+            <!-- Membership Cards Section -->
+            <aside class="cards-section">
                 <h2>Membership Levels</h2>
 
                 <div class="membership-cards">
-
-                    <div class="member-card fade-in-card" style="--delay: 0s;">
+                    <!-- CORREGIDO: Se eliminó style="--delay..." y se usaron las clases delay-1, delay-2, etc. -->
+                    <div class="member-card fade-in-card delay-1">
                         <div class="card-body">
                             <h2>NP Membership</h2>
                             <p class="price">Free</p>
@@ -144,16 +143,16 @@
                         </div>
                     </div>
 
-                    <div class="member-card fade-in-card" style="--delay: 0.2s;">
+                    <div class="member-card fade-in-card delay-2">
                         <div class="card-body">
-                            <h2>Bronze Member</h2>
+                            <h2>Bronze Membership</h2>
                             <p class="price">$50 / year</p>
                             <p>Entry-level benefits for small businesses</p>
                             <button type="button" class="modal-trigger" data-modal="modal-bronze">Learn More</button>
                         </div>
                     </div>
 
-                    <div class="member-card fade-in-card" style="--delay: 0.4s;">
+                    <div class="member-card fade-in-card delay-3">
                         <div class="card-body">
                             <h2>Silver Membership</h2>
                             <p class="price">$100 / year</p>
@@ -162,7 +161,7 @@
                         </div>
                     </div>
 
-                    <div class="member-card fade-in-card" style="--delay: 0.6s;">
+                    <div class="member-card fade-in-card delay-4">
                         <div class="card-body">
                             <h2>Gold Membership</h2>
                             <p class="price">$250 / year</p>
@@ -170,7 +169,6 @@
                             <button type="button" class="modal-trigger" data-modal="modal-gold">Learn More</button>
                         </div>
                     </div>
-
                 </div>
             </aside>
         </div>
@@ -248,6 +246,5 @@
         </div>
     </footer>
 
-    
 </body>
 </html>
