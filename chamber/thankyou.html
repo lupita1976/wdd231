@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Querétaro Chamber of Commerce">
+    <title>Thank You - Querétaro Chamber of Commerce</title>
+
+    
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="home.js" defer></script>
+    <script src="thankyou.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="site-title">Querétaro Chamber of Commerce</div>
+        <button id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="current">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Thank You for Joining!</h1>
+
+        <section class="thankyou-section">
+            <p class="thankyou-message">
+                We appreciate your interest in the Querétaro Chamber of Commerce.
+                Below is a summary of the information you submitted:
+            </p>
+
+            <dl class="submission-summary">
+                <dt>First Name</dt>
+                <dd id="out-firstname">—</dd>
+
+                <dt>Last Name</dt>
+                <dd id="out-lastname">—</dd>
+
+                <dt>Email Address</dt>
+                <dd id="out-email">—</dd>
+
+                <dt>Mobile Phone</dt>
+                <dd id="out-mobile">—</dd>
+
+                <dt>Business / Organization</dt>
+                <dd id="out-orgname">—</dd>
+
+                <dt>Membership Level</dt>
+                <dd id="out-level">—</dd>
+
+                <dt>Submission Timestamp</dt>
+                <dd id="out-timestamp">—</dd>
+            </dl>
+
+            <p class="next-steps">
+                A member of our team will contact you shortly at the email address provided.
+                Welcome to the Chamber!
+            </p>
+
+            <a href="index.html" class="back-home-btn">Return to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Querétaro Chamber of Commerce</p>
+            <p>Av. Constituyentes 100, Querétaro, Qro., México</p>
+            <p>(442) 555-0100 • info@queretarochamber.org</p>
+        </div>
+        <div class="footer-dev">
+            <p>Guadalupe Fernández León • WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
