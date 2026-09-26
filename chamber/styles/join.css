@@ -168,7 +168,7 @@
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.6s ease forwards;
-    /* Ya no necesita var(--delay) porque usamos las clases .delay-1, etc. */
+    
 }
 
 @keyframes fadeInUp {
@@ -178,7 +178,7 @@
     }
 }
 
-/* Clases para reemplazar los estilos en línea */
+
 .delay-1 { animation-delay: 0s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.4s; }
