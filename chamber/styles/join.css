@@ -145,23 +145,10 @@
     padding: 1.25rem 1rem;
 }
 
-.member-card h2 {
-    font-family: "Source Serif 4", Georgia, serif;
-    font-size: 1.1rem;
-    margin-bottom: 0.4rem;
-    color: #1F2A24;
-}
-
 .member-card .price {
     font-size: 1.1rem;
     font-weight: 700;
     color: #C97B3D;
-    margin: 0.3rem 0;
-}
-
-.member-card p {
-    font-size: 0.85rem;
-    color: #55605a;
     margin: 0.3rem 0;
 }
 
@@ -370,3 +357,8 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.6s; }
