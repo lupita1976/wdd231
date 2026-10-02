@@ -1,0 +1,225 @@
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #1a237e;
+    --color-white: #ffffff;
+    --color-light-gray: #f0f0f0;
+    --color-accent: #e53935;
+    --color-text: #212121;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--color-light-gray);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* ===== COLOR SWATCHES ===== */
+.color-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.swatch {
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.color-box {
+    width: 100%;
+    height: 80px;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+}
+
+.swatch p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* ===== FONT EXAMPLES ===== */
+.font-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.font-card {
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.font-card p {
+    font-size: 0.95rem;
+}
+
+/* ===== WIREFRAME ===== */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wireframe {
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.wireframe h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+.wireframe img {
+    border: 2px solid var(--color-text);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    max-width: 50%;
+}
+
+.wireframe p {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.75rem;
+}
+
+.wireframe1{
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+
+}
+.wireframe1 img {
+    border: 2px solid var(--color-text);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    max-width: 180%;
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .color-swatches,
+    .font-examples,
+    .wireframe-container {
+        grid-template-columns: 1fr;
+    }
+}

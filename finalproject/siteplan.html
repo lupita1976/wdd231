@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for the Pokeapi project - WDD 231">
+    <title>Pokedex - Site Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+
+    <header>
+        <h1>Pokeapi — Site Plan</h1>
+        <p>WDD 231 | Week 5 Project</p>
+    </header>
+
+    <main>
+
+        <!-- ==================== 1. SITE NAME ==================== -->
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>Pokeapi</strong></p>
+            <p>
+                The name "Pokeapi" is the iconic digital encyclopedia from the Pokémon franchise
+                that catalogs all known Pokémon species. It is instantly recognizable to fans of
+                the franchise and clearly communicates the purpose of the site: to browse, search,
+                and explore information about Pokémon. The name is short, memorable, and directly
+                tied to the content.
+            </p>
+            <p><em>Optional domain availability: mypokedex.app</em></p>
+        </section>
+
+        <!-- ==================== 2. SITE PURPOSE ==================== -->
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>
+                The Pokedex website serves as an interactive digital encyclopedia for Pokémon fans.
+                It provides a browsable and searchable catalog of Pokémon using the
+                <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>.
+                Users can explore Pokémon by their National Dex number, view detailed information
+                such as types, abilities, stats, and sprites, and filter or search for specific
+                Pokémon. The site aims to be a fast, accessible, and visually appealing reference
+                tool for both casual fans and competitive players.
+            </p>
+            <p>The site will include three pages:</p>
+            <ul>
+                <li><strong>Home / Pokeapi:</strong> A grid of all Pokémon with a search bar and type filters.</li>
+                <li><strong>Pokémon Detail:</strong> A dedicated page for each Pokémon showing stats, types, abilities, and evolution chain.</li>
+                <li><strong>Search:</strong> Search page with advanced filtering options.</li>
+                <li><strong>About:</strong> Information about the project, the PokéAPI, and credits.</li>
+            </ul>
+        </section>
+
+        <!-- ==================== 3. SCENARIOS ==================== -->
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+
+            <h3>Scenario 1</h3>
+            <p>
+                <em>"I'm a new Pokémon fan and I want to learn about the first generation of
+                Pokémon. How can I browse through them easily and see their basic information
+                like type and number?"</em>
+            </p>
+            <p>
+                <strong>Answer:</strong> The home page displays all Pokémon in a responsive grid
+                organized by their National Dex number. Users can scroll through the list or use
+                the search bar to find a specific Pokémon by name or number.
+            </p>
+
+            <h3>Scenario 2</h3>
+            <p>
+                <em>"I'm building a competitive team and I need to know the base stats and abilities
+                of Charizard. Where can I find that detailed information?"</em>
+            </p>
+            <p>
+                <strong>Answer:</strong> By clicking on any Pokémon card in the grid, the user is
+                taken to the Pokémon detail page, which displays base stats (HP, Attack, Defense,
+                Special Attack, Special Defense, Speed), abilities, types, and a visual stat chart.
+            </p>
+
+            <h3>Scenario 3</h3>
+            <p>
+                <em>"I only want to see Fire-type Pokémon. Is there a way to filter the list?"</em>
+            </p>
+            <p>
+                <strong>Answer:</strong> The home page includes a type filter bar that allows users
+                to select one or more types (e.g., Fire, Water, Grass) and instantly filter the
+                displayed Pokémon grid.
+            </p>
+        </section>
+
+        <!-- ==================== 4. COLOR SCHEME ==================== -->
+        <section id="color-scheme">
+            <h2>4. Color Scheme</h2>
+            <p>
+                The color palette is inspired by the classic Pokédex device and the official
+                Pokémon branding. It uses a bold primary color for the header, clean neutrals
+                for content areas, and accent colors for Pokémon type badges.
+            </p>
+
+            <div class="color-swatches">
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #1a237e;"></div>
+                    <p><strong>#1A237E</strong> — Deep Indigo Blue</p>
+                    <p>Used for the header background, footer background, and primary navigation elements. Provides strong brand identity and contrast.</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #ffffff;"></div>
+                    <p><strong>#FFFFFF</strong> — White</p>
+                    <p>Used for the main page background, card backgrounds, and text on dark backgrounds. Ensures readability and a clean layout.</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #f0f0f0;"></div>
+                    <p><strong>#F0F0F0</strong> — Light Gray</p>
+                    <p>Used for card backgrounds in the Pokémon grid and subtle section backgrounds. Provides visual separation without being distracting.</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #e53935;"></div>
+                    <p><strong>#E53935</strong> — Pokédex Red</p>
+                    <p>Used for accent elements such as buttons, hover states, the search icon, and the Fire-type badge. Adds energy and draws attention to interactive elements.</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #212121;"></div>
+                    <p><strong>#212121</strong> — Near Black</p>
+                    <p>Used for body text and headings on light backgrounds. Provides excellent readability and contrast.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. TYPOGRAPHY ==================== -->
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>Two fonts are selected for this project to balance readability with a modern, playful feel appropriate for a Pokémon-themed site.</p>
+
+            <div class="font-examples">
+                <div class="font-card">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2rem; color: #1a237e;">Poppins</h3>
+                    <p><strong>Usage:</strong> Headings (h1, h2, h3) and the site logo/title in the header.</p>
+                    <p><strong>Why:</strong> Poppins is a geometric sans-serif font with a friendly, modern feel. Its bold weights work well for titles and give the site a playful yet professional look that fits the Pokémon theme.</p>
+                    <p style="font-family: 'Poppins', sans-serif; font-weight: 700;">ABCDEF 123456 — Poppins Bold</p>
+                </div>
+                <div class="font-card">
+                    <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 2rem; color: #1a237e;">Inter</h3>
+                    <p><strong>Usage:</strong> Body text, paragraphs, navigation links, card labels, and UI elements.</p>
+                    <p><strong>Why:</strong> Inter is designed for computer screens with excellent readability at small sizes. It is clean, neutral, and highly legible, making it perfect for body content and data-heavy sections like stat tables.</p>
+                    <p style="font-family: 'Inter', sans-serif;">ABCDEF 123456 — Inter Regular</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. WIREFRAME ==================== -->
+        <section id="wireframe">
+            <h2>6. Wireframe</h2>
+            <p>
+                Below are the wireframe sketches for the home page (Pokedex grid) in both
+                small (mobile) and large (desktop/tablet) viewport sizes. These are hand-drawn
+                sketches photographed and embedded in the document.
+            </p>
+
+            <div class="wireframe-container">
+                <div class="wireframe">
+                    <h3>Small Viewport (Mobile)</h3>
+                    
+                    <img src="images/1000045068.jpg" alt="Wireframe sketch of the Pokedex home page in small/mobile viewport showing a single-column card layout with header, search bar, and stacked Pokémon cards" width="100%">
+                    <p><em>Figure 1: Mobile wireframe — single column layout with header, search bar, and vertically stacked Pokémon cards.</em></p>
+                </div>
+                <div class="wireframe1">
+                    <h3>Large Viewport (Desktop/Tablet)</h3>
+                   
+                    <img src="images/1000045080.jpg" alt="Wireframe sketch of the Pokedex home page in large/desktop viewport showing a multi-column grid layout with header, search bar, and a grid of Pokémon cards" width="100%">
+                    <p><em>Figure 2: Desktop wireframe — multi-column grid layout with header, full-width search bar, and a responsive grid of Pokémon cards (3-4 columns).</em></p>
+                </div>
+            </div>
+
+            <p>
+                <strong>Note:</strong> The wireframes show the structural layout without colors,
+                images, or detailed styling. The header contains the site title and search bar.
+                The main content area displays Pokémon cards in a responsive grid. On mobile,
+                cards stack in a single column; on desktop, they arrange in multiple columns.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pokeapi Project | WDD 231 | Site Plan Document</p>
+    </footer>
+
+</body>
+</html>
