@@ -165,13 +165,7 @@
 
 /* Very large screens */
 @media (min-width: 1200px) {
-    .discover-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-            "card1 card2 card3 card4"
-            "card5 card6 card7 card8";
-    }
-    
+        
     .discover-card:nth-child(8) {
         grid-column: span 1;
     }
