@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokedex - Browse and search all Pokémon">
+    <meta name="author" content="Guadalupe Fernández" />
+    <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/poke.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/pokemon.png">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="pokeball-icon" viewBox="0 0 100 100" width="36" height="36">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="4"/>
+                    <line x1="2" y1="50" x2="98" y2="50" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="6" fill="#1a237e"/>
+                </svg>
+                <span>Pokedex</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Pokedex</a>
+                <a href="favorites.html" class="nav-link">
+                    Favorites
+                    <span class="fav-count" id="favCount">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SEARCH & FILTER BAR ===== -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search Pokémon by name or number..." aria-label="Search Pokémon">
+            </div>
+
+            <div class="filter-controls">
+                <!-- Type Filter -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="typeFilterBtn" aria-expanded="false" aria-controls="typeDropdown">
+                        <span id="typeFilterLabel">All Types</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="typeDropdown" role="listbox">
+                        <button class="dropdown-item active" data-type="all" role="option">All Types</button>
+                        <button class="dropdown-item" data-type="normal" role="option">Normal</button>
+                        <button class="dropdown-item" data-type="fire" role="option">Fire</button>
+                        <button class="dropdown-item" data-type="water" role="option">Water</button>
+                        <button class="dropdown-item" data-type="grass" role="option">Grass</button>
+                        <button class="dropdown-item" data-type="electric" role="option">Electric</button>
+                        <button class="dropdown-item" data-type="ice" role="option">Ice</button>
+                        <button class="dropdown-item" data-type="fighting" role="option">Fighting</button>
+                        <button class="dropdown-item" data-type="poison" role="option">Poison</button>
+                        <button class="dropdown-item" data-type="ground" role="option">Ground</button>
+                        <button class="dropdown-item" data-type="flying" role="option">Flying</button>
+                        <button class="dropdown-item" data-type="psychic" role="option">Psychic</button>
+                        <button class="dropdown-item" data-type="bug" role="option">Bug</button>
+                        <button class="dropdown-item" data-type="rock" role="option">Rock</button>
+                        <button class="dropdown-item" data-type="ghost" role="option">Ghost</button>
+                        <button class="dropdown-item" data-type="dragon" role="option">Dragon</button>
+                        <button class="dropdown-item" data-type="dark" role="option">Dark</button>
+                        <button class="dropdown-item" data-type="steel" role="option">Steel</button>
+                        <button class="dropdown-item" data-type="fairy" role="option">Fairy</button>
+                    </div>
+                </div>
+
+                <!-- Sort -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="sortBtn" aria-expanded="false" aria-controls="sortDropdown">
+                        <span id="sortLabel">Sort: Number</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="sortDropdown">
+                        <button class="dropdown-item active" data-sort="number">Number</button>
+                        <button class="dropdown-item" data-sort="name">Name</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <main class="pokedex-main">
+        <div class="pokemon-grid" id="pokemonGrid" role="list">
+            <!-- Cards injected by JS -->
+        </div>
+        <div class="loading" id="loading">
+            <div class="pokeball-spinner"></div>
+            <p>Loading Pokémon...</p>
+        </div>
+        <div class="no-results" id="noResults" hidden>
+            <p>No Pokémon found. Try a different search or filter.</p>
+        </div>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <svg class="pokeball-icon" viewBox="0 0 100 100" width="28" height="28">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="4"/>
+                    <line x1="2" y1="50" x2="98" y2="50" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="6" fill="#1a237e"/>
+                </svg>
+                <span>Pokedex</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Pokedex</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="siteplan.html">Site Plan</a>
+            </nav>
+            <p class="footer-copy">
+                &copy; 2026 Pokedex Project | Guadalupe Fernández | WDD 231 | Data from
+                <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
