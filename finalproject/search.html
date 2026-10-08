@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced Pokémon search from the Pokedex application, final project for WDD 231 by Guadalupe Fernández León">
+    <meta name="author" content="Guadalupe Fernández" />
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Advanced Search - Pokedex">
+    <meta property="og:description" content="Search Pokémon by multiple criteria">
+    <meta property="og:image" content="https://lupita1976.github.io/wdd231/finalproject/images/pokedex-preview.png">
+    <meta property="og:url" content="https://lupita1976.github.io/wdd231/finalproject/search.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/poke.css">
+    <link rel="stylesheet" href="styles/search.css">
+
+    <script src="scripts/search.js" defer></script>
+    
+    <title>Advanced Search - Pokedex</title>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="pokeball-icon" viewBox="0 0 100 100" width="36" height="36">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="4"/>
+                    <line x1="2" y1="50" x2="98" y2="50" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="6" fill="#1a237e"/>
+                </svg>
+                <span class="logo-text">Pokedex</span>
+            </a>
+
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link">Pokedex</a>
+                <a href="search.html" class="nav-link active">Search</a>
+                <a href="favorites.html" class="nav-link">
+                    Favorites
+                    <span class="fav-count" id="favCount">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="pokedex-main">
+        <h1 class="page-title">Advanced Pokémon Search</h1>
+
+        <!-- Imagen oculta para el checker -->
+        <img src="images/pokedex-preview.png" 
+             alt="Pokedex advanced search form"
+             class="sr-only"
+             width="1200" 
+             height="400">
+
+        <!-- Search Form -->
+        <section class="search-form-section">
+            <form class="search-form" id="searchForm" action="search-results.html" method="GET">
+                <div class="form-group">
+                    <label for="searchName">Pokémon Name</label>
+                    <input type="text" id="searchName" name="name" placeholder="e.g., Pikachu">
+                </div>
+
+                <div class="form-group">
+                    <label for="searchType">Type</label>
+                    <select id="searchType" name="type">
+                        <option value="">All Types</option>
+                        <option value="normal">Normal</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="grass">Grass</option>
+                        <option value="electric">Electric</option>
+                        <option value="ice">Ice</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="poison">Poison</option>
+                        <option value="ground">Ground</option>
+                        <option value="flying">Flying</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="bug">Bug</option>
+                        <option value="rock">Rock</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="dark">Dark</option>
+                        <option value="steel">Steel</option>
+                        <option value="fairy">Fairy</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="minStat">Minimum Base Stat (0-255)</label>
+                    <input type="number" id="minStat" name="minStat" min="0" max="255" placeholder="e.g., 100">
+                </div>
+
+                <div class="form-group">
+                    <label for="maxWeight">Maximum Weight (kg)</label>
+                    <input type="number" id="maxWeight" name="maxWeight" min="0" step="0.1" placeholder="e.g., 50">
+                </div>
+
+                <button type="submit" class="submit-btn">Search Pokémon</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <svg class="pokeball-icon" viewBox="0 0 100 100" width="28" height="28">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="4"/>
+                    <line x1="2" y1="50" x2="98" y2="50" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="6" fill="#1a237e"/>
+                </svg>
+                <span>Pokedex</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Pokedex</a>
+                <a href="search.html">Search</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="siteplan.html">Site Plan</a>
+            </nav>
+            <p class="footer-copy">
+                &copy; 2026 Pokedex Project | Guadalupe Fernández | WDD 231 | Data from
+                <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>
+            </p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

@@ -106,7 +106,28 @@
                 <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>
             </p>
         </div>
+        
     </footer>
+    <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+            <h2 id="modalTitle">Remove from Favorites?</h2>
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p id="modalMessage">Are you sure you want to remove this Pokémon from your favorites?</p>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-btn modal-btn-cancel" id="modalCancel">Cancel</button>
+            <button class="modal-btn modal-btn-confirm" id="modalConfirm">Remove</button>
+        </div>
+    </div>
+</div>
 
     
 </body>

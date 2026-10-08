@@ -26,6 +26,16 @@ const emptyState = document.getElementById('emptyState');
 const loadingEl = document.getElementById('loading');
 const favCountEl = document.getElementById('favCount');
 
+// ===== MODAL ELEMENTS =====
+const modalOverlay = document.getElementById('modalOverlay');
+const modalClose = document.getElementById('modalClose');
+const modalCancel = document.getElementById('modalCancel');
+const modalConfirm = document.getElementById('modalConfirm');
+const modalMessage = document.getElementById('modalMessage');
+
+// ===== STATE =====
+let pendingRemoveId = null;
+
 // ===== FAVORITES FUNCTIONS =====
 function getFavorites() {
     const stored = localStorage.getItem('pokedexFavorites');
@@ -38,18 +48,46 @@ function saveFavorites(favorites) {
 
 function updateFavCount() {
     const favorites = getFavorites();
-    favCountEl.textContent = favorites.length;
+    if (favCountEl) {
+        favCountEl.textContent = favorites.length;
+    }
 }
 
-function removeFromFavorite(pokemonId) {
-    let favorites = getFavorites();
-    const index = favorites.indexOf(pokemonId);
+// ===== MODAL FUNCTIONS =====
+function showRemoveModal(pokemonId, pokemonName) {
+    pendingRemoveId = pokemonId;
     
-    if (index > -1) {
-        favorites.splice(index, 1);
-        saveFavorites(favorites);
-        updateFavCount();
-        loadFavorites(); // Reload the grid
+    if (modalMessage) {
+        modalMessage.textContent = `Are you sure you want to remove ${pokemonName} from your favorites?`;
+    }
+    
+    if (modalOverlay) {
+        modalOverlay.hidden = false;
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+}
+
+function hideModal() {
+    if (modalOverlay) {
+        modalOverlay.hidden = true;
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    pendingRemoveId = null;
+}
+
+function confirmRemove() {
+    if (pendingRemoveId !== null) {
+        let favorites = getFavorites();
+        const index = favorites.indexOf(pendingRemoveId);
+        
+        if (index > -1) {
+            favorites.splice(index, 1);
+            saveFavorites(favorites);
+            updateFavCount();
+            loadFavorites(); // Reload the grid
+        }
+        
+        hideModal();
     }
 }
 
@@ -89,7 +127,7 @@ function renderFavorites(pokemonList) {
         
         card.innerHTML = `
             <button class="fav-btn favorited" 
-                    aria-label="Remove from favorites"
+                    aria-label="Remove ${pokemon.name} from favorites"
                     data-id="${pokemon.id}">
                 ❤️
             </button>
@@ -102,11 +140,11 @@ function renderFavorites(pokemonList) {
             <span class="pokemon-name">#${pokemon.name}</span>
         `;
         
-        // Remove favorite button click
+        // Remove favorite button click - opens modal
         const favBtn = card.querySelector('.fav-btn');
         favBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            removeFromFavorite(pokemon.id);
+            showRemoveModal(pokemon.id, pokemon.name);
         });
         
         // Card click - navigate to detail
@@ -148,4 +186,33 @@ async function loadFavorites() {
 document.addEventListener('DOMContentLoaded', () => {
     updateFavCount();
     loadFavorites();
+    
+    // Modal event listeners
+    if (modalClose) {
+        modalClose.addEventListener('click', hideModal);
+    }
+    
+    if (modalCancel) {
+        modalCancel.addEventListener('click', hideModal);
+    }
+    
+    if (modalConfirm) {
+        modalConfirm.addEventListener('click', confirmRemove);
+    }
+    
+    // Close modal when clicking outside the dialog
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                hideModal();
+            }
+        });
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay && !modalOverlay.hidden) {
+            hideModal();
+        }
+    });
 });
