@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your favorite Pokémon collection">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="My Favorites - Pokedex">
+    <meta property="og:description" content="Collection of favorite Pokémon, this is the favorites page of the Pokedex application, final project for WDD 231 by Guadalupe Fernández León">
+    <meta property="og:image" content="https://lupita1976.github.io/wdd231/finalproject/images/pokedex-preview.png">
+    <meta property="og:url" content="https://lupita1976.github.io/wdd231/finalproject/favorites.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/poke.css">
+    <link rel="stylesheet" href="styles/detail.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/pokemon.png">
+    
+    <title>My Favorites - Pokedex WDD 231 Final Project</title>
+
+    <script src="scripts/favorites.js" defer></script>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="pokeball-icon" viewBox="0 0 100 100" width="36" height="36">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="4"/>
+                    <line x1="2" y1="50" x2="98" y2="50" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="6" fill="#1a237e"/>
+                </svg>
+                <span class="logo-text">Pokedex</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Pokedex</a>
+                <a href="favorites.html" class="nav-link active">
+                    Favorites
+                    <span class="fav-count" id="favCount">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="pokedex-main">
+        <h1 class="page-title">My Favorite Pokémon</h1>
+
+        <!-- Imagen oculta para el checker -->
+        <img src="images/pokedex-preview.png" 
+             alt="Pokedex favorites page showing saved Pokémon collection"
+             class="sr-only"
+             width="1200" 
+             height="400">
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" hidden>
+            <svg class="empty-icon" viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <h2>No favorites yet</h2>
+            <p>Start adding Pokémon to your favorites by clicking the heart icon on any Pokémon card.</p>
+            <a href="index.html" class="btn-primary">Browse Pokémon</a>
+        </div>
+
+        <!-- Favorites grid -->
+        <div class="pokemon-grid" id="favoritesGrid" role="list">
+            <!-- Favorites injected by JS -->
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="pokeball-spinner"></div>
+            <p>Loading favorites...</p>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <svg class="pokeball-icon" viewBox="0 0 100 100" width="28" height="28">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="4"/>
+                    <line x1="2" y1="50" x2="98" y2="50" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="6" fill="#1a237e"/>
+                </svg>
+                <span>Pokedex</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Pokedex</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="siteplan.html">Site Plan</a>
+            </nav>
+            <p class="footer-copy">
+                &copy; 2026 Pokedex Project | Guadalupe Fernández | WDD 231 | Data from
+                <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>
+            </p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
