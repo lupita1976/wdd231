@@ -420,7 +420,7 @@ button {
     margin-right: auto;
 }
 
-.btn-primary {
+.cta-button {
     display: inline-block;
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -433,7 +433,7 @@ button {
     transition: all 0.2s;
 }
 
-.btn-primary:hover {
+.cta-button:hover {
     background-color: var(--color-primary-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
