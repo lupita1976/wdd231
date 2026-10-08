@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pokedex - Browse and search all Pokémon, final project of WDD 231 course by Guadalupe Fernández León.">
+    <meta name="description" content="Pokedex - Browse and search all Pokémon, final project for WDD 231 by Guadalupe Fernández León">
     <meta name="author" content="Guadalupe Fernández" />
-    <title>Pokedex WDD 231 – Home – Guadalupe Fernández León</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/poke.css">
-    <link rel="stylesheet" href="styles/detail.css">
-    <link type="image/png" sizes="16x16" rel="icon" href="images/pokemon.png">
-
-    <meta property="og:description" content="Discover a service-oriented, globally-connected Christian church that is led by a prophet of God and seeks to follow Jesus Christ and His restored gospel.">
-    <meta property="og:image" content="https://www.churchofjesuschrist.org/imgs/45e59c1c726d11ec9eb5eeeeac1ea79d5f76a9ce/full/!1280%2C674/0/default">
-    <meta property="og:title" content="Homepage - The Church of Jesus Christ of Latter-day Saints">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Pokedex - Browse and search all Pokémon">
+    <meta property="og:description" content="Interactive Pokedex application using PokéAPI">
     <meta property="og:image" content="https://lupita1976.github.io/wdd231/finalproject/images/pokedex-preview.png">
     <meta property="og:url" content="https://lupita1976.github.io/wdd231/finalproject/index.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/poke.css">
+    <link rel="stylesheet" href="styles/detail.css">
+    
+    <title>Pokedex</title>
+</head>
 
    
     <script src="scripts/main.js" defer></script>
@@ -108,6 +115,12 @@
 
    
     <main class="pokedex-main">
+        <img src="images/pokedex-preview.png" 
+         alt="Pokedex application showing a grid of Pokémon cards with search and filter options"
+         class="sr-only"
+         width="1200" 
+         height="400">
+
         <h1 class="page-title">Pokémon Pokedex</h1>
         <div class="pokemon-grid" id="pokemonGrid" role="list">
             <!-- Cards injected by JS -->
