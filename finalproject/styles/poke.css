@@ -1,4 +1,4 @@
-
+/* ===== CSS VARIABLES ===== */
 :root {
     --color-primary: #1a237e;
     --color-primary-light: #283593;
@@ -17,7 +17,7 @@
     --radius-sm: 8px;
 }
 
-
+/* ===== RESET ===== */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -46,7 +46,7 @@ button {
     background: none;
 }
 
-
+/* ===== HEADER ===== */
 .site-header {
     background-color: var(--color-primary);
     padding: 1rem 1.5rem;
@@ -66,7 +66,7 @@ button {
     gap: 1rem;
 }
 
-.logo h1{
+.logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -115,7 +115,7 @@ button {
     text-align: center;
 }
 
-
+/* ===== SEARCH SECTION ===== */
 .search-section {
     background-color: var(--color-primary);
     padding: 0 1.5rem 1.5rem;
@@ -159,7 +159,7 @@ button {
     flex-wrap: wrap;
 }
 
-
+/* ===== DROPDOWNS ===== */
 .filter-dropdown {
     position: relative;
 }
@@ -226,7 +226,7 @@ button {
     color: var(--color-white);
 }
 
-
+/* ===== POKEMON GRID ===== */
 .pokedex-main {
     flex: 1;
     max-width: 1200px;
@@ -302,11 +302,7 @@ button {
     transform: scale(1.2);
 }
 
-.fav-btn.favorited {
-   
-}
-
-
+/* ===== LOADING & NO RESULTS ===== */
 .loading, .no-results {
     text-align: center;
     padding: 3rem 1rem;
@@ -328,7 +324,7 @@ button {
     to { transform: rotate(360deg); }
 }
 
-
+/* ===== FOOTER ===== */
 .site-footer {
     background-color: var(--color-primary);
     color: rgba(255,255,255,0.85);
@@ -379,7 +375,7 @@ button {
     color: rgba(255,255,255,0.6);
 }
 
-
+/* ===== SCREEN READER ONLY ===== */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -439,6 +435,25 @@ button {
     box-shadow: var(--shadow-md);
 }
 
+/* ===== HAMBURGER MENU ===== */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
 /* ===== MODAL DIALOG ===== */
 .modal-overlay {
     position: fixed;
@@ -447,11 +462,16 @@ button {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    padding: 1rem;
+    /* Sin display: flex aquí para que el atributo [hidden] funcione */
+}
+
+/* Solo se muestra como flex cuando NO tiene el atributo hidden */
+.modal-overlay:not([hidden]) {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-    padding: 1rem;
 }
 
 .modal-dialog {
@@ -550,25 +570,7 @@ button {
     background-color: #c62828;
 }
 
-/* ===== HAMBURGER MENU ===== */
-.hamburger-btn {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-white);
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
+/* ===== RESPONSIVE DESIGN ===== */
 @media screen and (max-width: 768px) {
     .hamburger-btn {
         display: flex;
@@ -584,6 +586,7 @@ button {
         padding: 1rem;
         display: none;
         box-shadow: var(--shadow-md);
+        z-index: 99;
     }
 
     .main-nav.active {
@@ -595,162 +598,19 @@ button {
         width: 100%;
         text-align: center;
     }
-}
 
-/* ===== HAMBURGER MENU ===== */
-.hamburger-btn {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-white);
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-@media screen and (max-width: 768px) {
-    .hamburger-btn {
-        display: flex;
-    }
-
-    .main-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--color-primary);
-        flex-direction: column;
-        padding: 1rem;
-        display: none;
-        box-shadow: var(--shadow-md);
-    }
-
-    .main-nav.active {
-        display: flex;
-    }
-
-    .nav-link {
-        padding: 0.75rem 1rem;
-        width: 100%;
-        text-align: center;
+    .pokemon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.75rem;
     }
 }
 
-/* ===== MODAL DIALOG ===== */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 1rem;
-}
-
-.modal-dialog {
-    background-color: var(--color-white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
-    max-width: 500px;
-    width: 100%;
-    animation: modalSlideIn 0.3s ease;
-}
-
-@keyframes modalSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
+@media screen and (max-width: 480px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .logo {
+        font-size: 1.2rem;
     }
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--color-medium-gray);
-}
-
-.modal-header h2 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: var(--color-text);
-    margin: 0;
-}
-
-.modal-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    color: var(--color-text-light);
-    transition: color 0.2s;
-}
-
-.modal-close:hover {
-    color: var(--color-text);
-}
-
-.modal-body {
-    padding: 1.5rem;
-}
-
-.modal-body p {
-    font-size: 1rem;
-    color: var(--color-text);
-    margin: 0;
-}
-
-.modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-top: 1px solid var(--color-medium-gray);
-}
-
-.modal-btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.modal-btn-cancel {
-    background-color: var(--color-light-gray);
-    color: var(--color-text);
-}
-
-.modal-btn-cancel:hover {
-    background-color: var(--color-medium-gray);
-}
-
-.modal-btn-confirm {
-    background-color: var(--color-accent);
-    color: var(--color-white);
-}
-
-.modal-btn-confirm:hover {
-    background-color: #c62828;
 }
